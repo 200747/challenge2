@@ -1,0 +1,155 @@
+$colors: (
+  primary: #262626,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$padding: 15px;
+
+$roro: 840px;
+
+@mixin roro {
+  @media (max-width: #{$roro}) {
+      @content
+  }
+}
+
+$rere: 0px 840px 0px 840px;
+
+@mixin rere {
+  @media (min-width: #{$rara}) {
+      @content
+  }
+}
+
+$rara: 840px;
+
+@mixin rara {
+  @media (min-width: #{$rara}) {
+      @content
+  }
+}
+
+$desktop: 900px;
+
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+      @content
+  }
+}
+
+$desktop2: 900px;
+
+
+@mixin desktop2 {
+  @media (max-width: #{$desktop2}) {
+      @content
+  }
+}
+
+
+
+body,html {
+  height: 100%;
+}
+
+body {
+  background: #444444;
+  margin: 0;
+  font-size: 100%;
+  @include desktop {
+  background-color: #fff; 
+}
+}
+
+
+header {
+  section {
+    background-color: color(primary);
+    height: 12vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    div#titlemove {
+    @include desktop2 {
+        margin: 0 auto;
+    }
+  }
+    div#h2 {
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 3.2vh;
+      vertical-align: middle;
+      margin-top: 4vh;
+
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      @include desktop {
+        font-size: 10px;
+        margin: 0 0 0 3%;
+        position: absolute;
+      }
+    }
+    div#h3 {
+      color: #bdbdbd;
+      font-size: 2vw;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      @include desktop {
+        font-size: 25px;
+        position: absolute;
+    }
+    }
+  }
+}
+
+main {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+    div#flex_container > div > div {
+      flex-direction: column;
+      width: 85vw;
+      background-color: #bdbdbd;
+      margin: 20px 0px 20px 0px;
+      
+      div#leftside {
+        font-size: 5vw;
+        
+      div#sidetitle {
+        font-size: 3vw;
+      }   
+    }
+    div#rightside {
+      float: right;
+      div img {
+        width: 20px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+
+
+
+
+footer {
+  section {
+    background-color: color(primary);
+    height: 12vh;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+}

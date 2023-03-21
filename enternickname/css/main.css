@@ -1,0 +1,128 @@
+body, html {
+  height: 100%;
+}
+
+body {
+  background: #444444;
+  margin: 0;
+  font-size: 100%;
+}
+@media (min-width: 900px) {
+  body {
+    background-color: #fff;
+  }
+}
+
+header section {
+  background-color: #262626;
+  height: 12vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+@media (max-width: 900px) {
+  header section div#titlemove {
+    margin: 0 auto;
+  }
+}
+header section div#h2 {
+  color: #fff;
+  text-decoration: none;
+  font-size: 4vw;
+  font-weight: bold;
+  line-height: 12vh;
+  vertical-align: middle;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media (min-width: 900px) {
+  header section div#h2 {
+    font-size: 25px;
+    margin: 0 0 0 3%;
+    position: absolute;
+  }
+}
+
+@media (max-width: 840px) {
+  main div {
+    padding: 20px 0px 0px 0px;
+  }
+}
+@media (min-width: 840px) {
+  main div div#top {
+    float: left;
+    padding: 200px 0vw 0px 20vw;
+  }
+}
+@media (min-width: 840px) {
+  main div div#top {
+    float: left;
+    padding: 19vh 0vw 19vh 20vw;
+  }
+}
+main div div#top div#input_container {
+  display: flex;
+  justify-content: center;
+}
+main div div#top div#input_container input {
+  border-radius: 20px;
+  background-color: #626262;
+  border: solid 1px #626262;
+  color: rgb(173, 173, 173);
+  font-weight: bold;
+  width: 240px;
+  height: 2.5em;
+  padding-left: 16px;
+  position: relative;
+}
+main div div#top a {
+  position: absolute;
+}
+main div div#top a img {
+  position: absolute;
+  width: 30px;
+  margin-left: 93px;
+  margin-top: 3.4px;
+  border-radius: 20px;
+}
+@media (min-width: 840px) {
+  main div div#middle {
+    padding: 15vh 0vw 70px 25vw;
+    font-size: 40px;
+  }
+}
+main div div#middle div#text_container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+main div div#middle div#text_container h1 {
+  width: 45%;
+  text-decoration: none;
+  margin: 0 auto;
+  font-size: 15px;
+  vertical-align: middle;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8e8e8e;
+  opacity: 70%;
+  font-weight: 550;
+}
+@media (min-width: 840px) {
+  main div div#middle div#text_container h1 {
+    font-size: 1.6vw;
+    width: 60%;
+  }
+}
+
+footer section {
+  background-color: #262626;
+  height: 12vh;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,188 @@
+$colors: (
+  primary: #262626,
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$padding: 15px;
+
+$roro: 840px;
+
+@mixin roro {
+  @media (max-width: #{$roro}) {
+      @content
+  }
+}
+
+$rere: 0px 840px 0px 840px;
+
+@mixin rere {
+  @media (min-width: #{$rara}) {
+      @content
+  }
+}
+
+$rara: 840px;
+
+@mixin rara {
+  @media (min-width: #{$rara}) {
+      @content
+  }
+}
+
+$desktop: 900px;
+
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+      @content
+  }
+}
+
+$desktop2: 900px;
+
+
+@mixin desktop2 {
+  @media (max-width: #{$desktop2}) {
+      @content
+  }
+}
+
+
+
+body,html {
+  height: 100%;
+}
+
+body {
+  background: #444444;
+  margin: 0;
+  font-size: 100%;
+  @include desktop {
+  background-color: #fff; 
+}
+}
+
+
+header {
+  section {
+    background-color: color(primary);
+    height: 12vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    div#titlemove {
+    @include desktop2 {
+        margin: 0 auto;
+    }
+  }
+    div#h2 {
+      color: #fff;
+      text-decoration: none;
+      font-size: 4vw;
+      font-weight: bold;
+      line-height: 12vh;
+      vertical-align: middle;
+      margin: 0 auto;
+      font-family: Arial, Helvetica, sans-serif;
+      @include desktop {
+        font-size: 25px;
+        margin: 0 0 0 3%;
+        position: absolute;
+    }
+    }
+  }
+}
+
+main {
+  div {
+    @include roro {
+      padding: 20px 0px 0px 0px;
+    }
+    div#top {
+      
+      @include rara {
+        float: left;
+        padding: 200px 0vw 0px 20vw;
+    }
+    @include rere {
+      float: left;
+      padding: 19vh 0vw 19vh 20vw;
+  }
+      div#input_container {
+        display: flex;
+        justify-content: center;
+      input {
+        border-radius: 20px;
+        background-color: #626262;
+        border: solid 1px #626262;
+        color: rgb(173, 173, 173);
+        font-weight: bold;
+        width: 240px;
+        height: 2.5em;
+        padding-left: 16px;
+        position: relative;
+      }
+    }
+  a{
+    position: absolute;
+  img {
+    position: absolute;
+    width: 30px;
+    margin-left: 93px;
+    margin-top: 3.4px;
+    border-radius: 20px;
+      }
+    }
+  }
+}
+  div {
+    div#middle {
+      @include rara {
+        padding: 15vh 0vw 70px 25vw;
+        font-size: 40px;
+    }
+      div#text_container {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+          h1 {
+            width: 45%;
+            text-decoration: none;
+            margin: 0 auto;
+            font-size: 15px;
+            vertical-align: middle;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #8e8e8e;
+            opacity: 70%;
+            font-weight:550;
+            @include rara {
+              font-size: 1.6vw;
+              width: 60%;
+          }
+          }
+      }
+  }
+}
+}
+
+
+
+
+
+footer {
+  section {
+    background-color: color(primary);
+    height: 12vh;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+}
